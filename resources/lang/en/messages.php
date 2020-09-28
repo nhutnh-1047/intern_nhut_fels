@@ -1,0 +1,22 @@
+<?php
+return [
+    'title' => 'FELS',
+    'start' => 'Start Lesson',
+    'my_profile' => 'My Profiles',
+    'word_list' => 'Word List',
+    'lesson' => 'Lesson',
+    'logout' => 'Log Out',
+    'email' => 'Email Address',
+    'name' => 'Name',
+    'password' => 'Password',
+    'repassword' => 'Re-Password',
+    'avatar' => 'Avatar',
+    'update' => 'Update',
+    'filter' => 'Fillter view',
+    'all' => 'All',
+    'learned' => 'Learned',
+    'unlearn' => 'Unlearn',
+    'remeber' => 'Remember',
+    'forget' => 'Forget',
+    'footer' => 'Footer',
+];
