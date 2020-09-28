@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLessonTopicOptionsTable extends Migration
+class CreateQuestionOptionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,18 @@ class CreateLessonTopicOptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('lesson_topic_options', function (Blueprint $table) {
+        Schema::create('question_option', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('lesson_topic_id')->unsigned();
+            $table->bigInteger('question_id')->unsigned();
             $table->string('option');
+            $table->boolean('correct')->default(false);
             $table->timestamps();
         });
 
-        Schema::table('lesson_topic_options', function ($table) {
-            $table->foreign('lesson_topic_id')
+        Schema::table('question_option', function ($table) {
+            $table->foreign('question_id')
                 ->references('id')
-                ->on('lesson_topics')
+                ->on('questions')
                 ->onDelete('cascade');
         });
     }
@@ -35,6 +36,6 @@ class CreateLessonTopicOptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lesson_topic_options');
+        Schema::dropIfExists('question_option');
     }
 }

@@ -34,7 +34,7 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">@lang('messages.my_profile')</a>
                     <a class="dropdown-item" href="#">@lang('messages.word_list')</a>
-                    <a class="dropdown-item" href="#">@lang('messages.lesson')</a>
+                    <a class="dropdown-item" href="{{ route('lesson.my.get') }}">@lang('messages.lesson')</a>
                     <a class="dropdown-item" href="{{ route('user.logout') }}">@lang('messages.logout')</a>
                 </div>
             </div>

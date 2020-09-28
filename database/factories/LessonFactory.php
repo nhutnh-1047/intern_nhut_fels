@@ -10,5 +10,12 @@ $factory->define(Lesson::class, function (Faker $faker) {
         'title' => $faker->text($maxNbChars = 50),
         'description' => $faker->text($maxNbChars = 300),
         'category_id' => $faker->biasedNumberBetween($min = 1, $max = 5),
+        'question_ids' => json_encode([
+            1,
+            2,
+            3,
+            4,
+            5
+        ]),
     ];
 });

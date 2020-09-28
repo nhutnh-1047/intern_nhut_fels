@@ -17,7 +17,7 @@ class CreateLessonUsersTable extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('lesson_id')->unsigned();
-            $table->string('status');
+            $table->status('status');
             $table->timestamps();
         });
 

@@ -10,8 +10,14 @@ class Question extends Model
         'content',
     ];
 
+    public function correctAns()
+    {
+        return $this->options()->getOriginal();
+    }
+
     public function options()
     {
-        return $this->belongsToMany(QuestionOption::class, 'question_id');
+        return $this->hasMany(QuestionOption::class, 'question_id');
     }
+
 }

@@ -17,6 +17,7 @@ class CreateLessonsTable extends Migration
             $table->id();
             $table->text('description')->nullable();
             $table->text('title')->nullable();
+            $table->json('question_ids');
             $table->bigInteger('category_id')->unsigned();
             $table->timestamps();
         });

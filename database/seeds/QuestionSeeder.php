@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class LessonTopicOptionSeeder extends Seeder
+class QuestionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class LessonTopicOptionSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\LessonTopicOption::class, 4)->create();
+        factory(App\Question::class, 20)->create();
     }
 }
