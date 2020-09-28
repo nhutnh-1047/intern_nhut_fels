@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 Route::get('change-language/{language}', 'HomeController@changeLanguage')
     ->name('user.change-language')->middleware('locale');
+
+Auth::routes();
+Route::get('/login', 'HomeController@login')->name('user.login');
+Route::get('/logout', 'Auth\LogoutController@index')->name('user.logout');

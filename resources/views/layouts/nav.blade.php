@@ -9,13 +9,25 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="{!!  route('user.change-language', ['en']) !!}">English</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{!!  route('user.change-language', ['vi']) !!}">Vietnam</a>
                 </li>
             </ul>
+            @guest
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('user.login') }}">@lang('messages.login')</a>
+                    </li>
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">@lang('messages.register')</a>
+                        </li>
+                    @endif
+                </ul>
+            @else
             <div class="dropdown">
                 <input type="image" src="{{ asset('/../../../asset/img/avatar.png') }}" width="50" height="50"
                     class="dropdown-toggle rounded-circle" data-toggle="dropdown" />
@@ -23,9 +35,10 @@
                     <a class="dropdown-item" href="#">@lang('messages.my_profile')</a>
                     <a class="dropdown-item" href="#">@lang('messages.word_list')</a>
                     <a class="dropdown-item" href="#">@lang('messages.lesson')</a>
-                    <a class="dropdown-item" href="#">@lang('messages.logout')</a>
+                    <a class="dropdown-item" href="{{ route('user.logout') }}">@lang('messages.logout')</a>
                 </div>
             </div>
+            @endguest
         </div>
     </div>
 </nav>
