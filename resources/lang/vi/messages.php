@@ -19,4 +19,8 @@ return [
     'remeber' => 'Đã thuộc',
     'forget' => 'Chưa thuộc',
     'footer' => 'Footer',
+    'login' => 'Đăng nhập',
+    'register' => 'Đăng kí',
+    'logout' => 'Đăng xuất',
+    'remember_me' => 'Ghi nhớ đăng nhập',
 ];

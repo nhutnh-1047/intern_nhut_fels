@@ -11,11 +11,20 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 Route::get('change-language/{language}', 'HomeController@changeLanguage')
     ->name('user.change-language')->middleware('locale');
+
+Route::group(['namespace' => 'Authencation'], function () {
+    Route::get('singup', 'ResgisterController@show')->name('register.get');
+    Route::post('singup', 'ResgisterController@create')->name('register.post');
+});
+
+Auth::routes();
+Route::get('/login', 'HomeController@login')->name('user.login');
+Route::get('/logout', 'Auth\LogoutController@index')->name('user.logout');
