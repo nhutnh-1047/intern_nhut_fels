@@ -1,0 +1,22 @@
+<?php
+return [
+    'title' => 'FELS',
+    'start' => 'Bắt đầu khóa học',
+    'my_profile' => 'Thông tin cá nhân',
+    'word_list' => 'Từ vựng của tôi',
+    'lesson' => 'Khóa học',
+    'logout' => 'Đăng xuất',
+    'email' => 'Địa chỉ email',
+    'name' => 'Tên',
+    'password' => 'Mật khẩu',
+    'repassword' => 'Nhập lại mật khẩu',
+    'avatar' => 'Ảnh đại diện',
+    'update' => 'Cập nhật',
+    'filter' => 'Lọc',
+    'all' => 'Tất cả',
+    'learned' => 'Đã học',
+    'unlearn' => 'Chưa học',
+    'remeber' => 'Đã thuộc',
+    'forget' => 'Chưa thuộc',
+    'footer' => 'Footer',
+];
