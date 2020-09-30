@@ -19,4 +19,8 @@ return [
     'remeber' => 'Remember',
     'forget' => 'Forget',
     'footer' => 'Footer',
+    'login' => 'Login',
+    'register' => 'Register',
+    'logout' => 'Log Out',
+    'remember_me' => 'Remember Me',
 ];
