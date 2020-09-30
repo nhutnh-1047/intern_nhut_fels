@@ -23,4 +23,9 @@ return [
     'register' => 'Đăng kí',
     'logout' => 'Đăng xuất',
     'remember_me' => 'Ghi nhớ đăng nhập',
+    'success_message' => 'Chúc mừng, bạn đã hoàn thành khóa học!',
+    'fail_message' => 'Rất tiếc, bạn cần học lại khóa học này!',
+    'start_exam' => 'Bắt đầu thi',
+    'start_learn' => 'Bắt đầu học',
+    'end_exam' => 'Kết thúc bài làm',
 ];

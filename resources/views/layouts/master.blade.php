@@ -16,7 +16,7 @@
     @include('layouts.nav')
     <div class="container-fluid">
         <div class="row">
-            @if (!Request::is('profile') && !Request::is('words'))
+            @if (!Request::is('profile') && !Request::is('words') && !Request::is('lesson'))
                 <div class="col-xl-2 mt-2">
                     @include('layouts.category')
                 </div>

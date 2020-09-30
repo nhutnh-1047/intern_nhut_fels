@@ -12,4 +12,9 @@ class Lesson extends Model
         'category_id',
         'question_ids',
     ];
+
+    public function lessonUsers()
+    {
+        return $this->hasMany(LessonUser::class, 'lesson_id');
+    }
 }
