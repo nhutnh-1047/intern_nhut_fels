@@ -23,4 +23,9 @@ return [
     'register' => 'Register',
     'logout' => 'Log Out',
     'remember_me' => 'Remember Me',
+    'success_message' => 'Congratulations on completing the course!',
+    'fail_message' => 'Sorry, you need to repeat this course!',
+    'start_exam' => 'Start Exam',
+    'start_learn' => 'Start Learn',
+    'end_exam' => 'End Exam',
 ];
