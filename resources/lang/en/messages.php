@@ -14,6 +14,7 @@ return [
     'update' => 'Update',
     'filter' => 'Fillter view',
     'all' => 'All',
+    'join_learn' => 'Join Learn',
     'learned' => 'Learned',
     'unlearn' => 'Unlearn',
     'remeber' => 'Remember',
@@ -26,6 +27,7 @@ return [
     'success_message' => 'Congratulations on completing the course!',
     'fail_message' => 'Sorry, you need to repeat this course!',
     'start_exam' => 'Start Exam',
-    'start_learn' => 'Start Learn',
+    'start_learn' => 'Continue Learn',
     'end_exam' => 'End Exam',
+    'category' => 'Category',
 ];
