@@ -14,6 +14,7 @@ return [
     'update' => 'Cập nhật',
     'filter' => 'Lọc',
     'all' => 'Tất cả',
+    'join_learn' => 'Bắt đầu học',
     'learned' => 'Đã học',
     'unlearn' => 'Chưa học',
     'remeber' => 'Đã thuộc',
@@ -26,6 +27,7 @@ return [
     'success_message' => 'Chúc mừng, bạn đã hoàn thành khóa học!',
     'fail_message' => 'Rất tiếc, bạn cần học lại khóa học này!',
     'start_exam' => 'Bắt đầu thi',
-    'start_learn' => 'Bắt đầu học',
+    'start_learn' => 'Tiếp tục học',
     'end_exam' => 'Kết thúc bài làm',
+    'category' => 'Danh mục',
 ];
