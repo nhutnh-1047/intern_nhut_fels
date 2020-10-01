@@ -10,4 +10,8 @@ interface LessonInterface
     public function findLessonUser($idUser);
 
     public function getNumberQuestion($id);
+
+    public function update($id, $data);
+    
+    public function delete($id);
 }
