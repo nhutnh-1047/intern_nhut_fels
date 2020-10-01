@@ -13,18 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', 'Homecontroller@index')->name('home');
+Route::post('/join/lesson', 'Homecontroller@setJoinLesson');
 
 Route::get('change-language/{language}', 'HomeController@changeLanguage')
     ->name('user.change-language')->middleware('locale');
-
-Route::group(['namespace' => 'Authencation'], function () {
-    Route::get('singup', 'ResgisterController@show')->name('register.get');
-    Route::post('singup', 'ResgisterController@create')->name('register.post');
-});
-
+Route::get('mylessons', 'LessonController@getMyLesson')->name('lesson.my.get');
+Route::get('/category/{id}', 'HomeController@getCategory')->name('category.filter.id');
+Route::group(
+    [
+        'prefix' => 'lesson',
+        'middleware' => 'check.user.lesson',
+    ], function () {
+        Route::get('view/{id}', 'LessonController@show')->name('lesson.view.id');
+        Route::get('{id}/exam', 'LessonController@showQuestion')->name('lesson.question.get');
+        Route::post('{id}/exam', 'LessonController@ajaxUserChoose')->name('lesson.question.post');
+    }
+);
 Auth::routes();
 Route::get('/login', 'HomeController@login')->name('user.login');
 Route::get('/logout', 'Auth\LogoutController@index')->name('user.logout');
+
+Route::resource('words', 'WordController', [
+    'only' => ['index', 'show', 'update'],
+]);

@@ -23,21 +23,21 @@
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register.get') }}">@lang('messages.register')</a>
+                            <a class="nav-link" href="{{ route('register') }}">@lang('messages.register')</a>
                         </li>
                     @endif
                 </ul>
             @else
-            <div class="dropdown">
-                <input type="image" src="{{ asset('/../../../asset/img/avatar.png') }}" width="50" height="50"
-                    class="dropdown-toggle rounded-circle" data-toggle="dropdown" />
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">@lang('messages.my_profile')</a>
-                    <a class="dropdown-item" href="#">@lang('messages.word_list')</a>
-                    <a class="dropdown-item" href="#">@lang('messages.lesson')</a>
-                    <a class="dropdown-item" href="{{ route('user.logout') }}">@lang('messages.logout')</a>
+                <div class="dropdown">
+                    <input type="image" src="{{ asset('/../../../asset/img/avatar.png') }}" width="50" height="50"
+                        class="dropdown-toggle rounded-circle" data-toggle="dropdown" />
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">@lang('messages.my_profile')</a>
+                        <a class="dropdown-item" href="{{ route('words.index') }}">@lang('messages.word_list')</a>
+                        <a class="dropdown-item" href="{{ route('lesson.my.get') }}">@lang('messages.lesson')</a>
+                        <a class="dropdown-item" href="{{ route('user.logout') }}">@lang('messages.logout')</a>
+                    </div>
                 </div>
-            </div>
             @endguest
         </div>
     </div>
