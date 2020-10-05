@@ -15,3 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
 
 mix.js('resources/js/joinLesson.js', 'public/js');
+mix.js('resources/js/updateWord.js', 'public/js');
+mix.js('resources/js/editMember.js', 'public/js');
+mix.js('resources/js/editLesson.js', 'public/js');

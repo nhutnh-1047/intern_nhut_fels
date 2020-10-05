@@ -3,7 +3,7 @@ namespace App\Repositories;
 
 use App\Lesson;
 use App\Repositories\LessonInterface;
-use App\User;
+use Illuminate\Database\Eloquent\ModelNotFoundException as ModelNotFoundException;
 
 class LessonRepository implements LessonInterface
 {
@@ -14,12 +14,16 @@ class LessonRepository implements LessonInterface
 
     public function findLessonId($id)
     {
-        return Lesson::findOrFail($id);
+        try {
+            return Lesson::findOrFail($id);
+        } catch (ModelNotFoundException $exception) {
+            return abort(404);
+        }
     }
 
     public function findLessonUser($id)
     {
-        return User::findOrFail($id)->lessons()->get();
+        return $this->findLessonId($id)->lessons()->get();
     }
 
     public function getNumberQuestion($id)
@@ -27,5 +31,14 @@ class LessonRepository implements LessonInterface
         $questionIds = Lesson::where('id', '=', $id)->first(['question_ids']);
 
         return count(json_decode($questionIds['question_ids']));
+    }
+
+    public function update($id, $data)
+    {
+        return $this->findLessonId($id)->update($data);
+    }
+
+    public function delete($id) {
+        return $this->findLessonId($id)->delete();
     }
 }

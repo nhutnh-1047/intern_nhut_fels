@@ -8,7 +8,7 @@
                     <h4 class="card-title">
                         <p>{{ $lesson->title }}</p>
                     </h4>
-                    <p class=" card-text">{{ Str::limit($lesson->description, 100) }}</p>
+                    <p>{{ strip_tags(htmlspecialchars_decode(Str::limit($lesson->description, 100))) }}</p>
                     <div class="text-center">
                         <a href="{{ route('lesson.view.id', ['id' => $lesson->id]) }}"
                             class="btn btn-primary join-class">@lang('messages.join_learn')

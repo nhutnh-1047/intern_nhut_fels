@@ -33,3 +33,30 @@ Route::group(
 Auth::routes();
 Route::get('/login', 'HomeController@login')->name('user.login');
 Route::get('/logout', 'Auth\LogoutController@index')->name('user.logout');
+
+Route::resource('words', 'WordController');
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+
+Route::group(
+    [
+        'prefix' => 'admin',
+        'middleware' => 'can:admin',
+    ], function () {
+        Route::get('/', 'AdminController@index')->name('admin.index');
+        Route::group(['prefix' => 'member'], function () {
+            Route::get('/', 'AdminController@showMember')->name('admin.member');
+            Route::get('/edit/{id}', 'AdminController@showEditMember')->name('admin.member.edit');
+            Route::post('/edit/{id}', 'AdminController@postEditMember')->name('admin.member.edit.post');
+        });
+        Route::group(['prefix' => 'lesson'], function () {
+            Route::get('/', 'AdminController@showLesson')->name('admin.lesson');
+            Route::get('/delete/{id}', 'AdminController@deleteLesson')->name('admin.lesson.delete');
+            Route::get('/edit/{id}', 'AdminController@showEditLesson')->name('admin.lesson.edit');
+            Route::post('/edit/{id}', 'AdminController@postEditLesson')->name('admin.lesson.edit.post');
+        });
+        Route::get('word', 'AdminController@showWord')->name('admin.word');
+    }
+);

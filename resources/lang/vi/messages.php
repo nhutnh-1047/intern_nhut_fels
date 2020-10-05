@@ -1,6 +1,7 @@
 <?php
 return [
-    'title' => 'FELS',
+    'logo' => 'FELS',
+    'title' => 'Tiêu đề',
     'start' => 'Bắt đầu khóa học',
     'my_profile' => 'Thông tin cá nhân',
     'word_list' => 'Từ vựng của tôi',
@@ -30,4 +31,15 @@ return [
     'start_learn' => 'Tiếp tục học',
     'end_exam' => 'Kết thúc bài làm',
     'category' => 'Danh mục',
+    'description' => 'Nội dung',
+    'change' => 'Thay đổi',
+    'address' => 'Địa chỉ',
+    'phone' => 'Số điện thoại',
+    'change_user_info' => 'Thay đổi thông tin người dùng',
+    'manager_member' => 'Quản lý thành viên',
+    'manager_lesson' => 'Quản lý bài học',
+    'manager_word' => 'Quản lý từ vựng',
+    'admin' => 'Quản trị',
+    'question_id' => 'Danh sách câu hỏi',
+    'action' => 'Hành động',
 ];
