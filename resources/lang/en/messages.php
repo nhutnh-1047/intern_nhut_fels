@@ -1,6 +1,7 @@
 <?php
 return [
-    'title' => 'FELS',
+    'logo' => 'FELS',
+    'title' => 'Title',
     'start' => 'Start Lesson',
     'my_profile' => 'My Profiles',
     'word_list' => 'Word List',
@@ -30,4 +31,15 @@ return [
     'start_learn' => 'Continue Learn',
     'end_exam' => 'End Exam',
     'category' => 'Category',
+    'description' => 'Description',
+    'change' => 'Change',
+    'address' => 'Address',
+    'phone' => 'Phone',
+    'change_user_info' => 'Update User',
+    'manager_member' => 'Manager Member',
+    'manager_lesson' => 'Manager Lesson',
+    'manager_word' => 'Manager Word',
+    'admin' => 'Admin',
+    'question_id' => 'Question List',
+    'action' => 'Action',
 ];
