@@ -1,6 +1,19 @@
 @extends('admin.index')
 
 @section('admin-content')
+    @if (session()->has('success'))
+        <div class="alert alert-success">
+            @if (is_array(session('success')))
+                <ul>
+                    @foreach (session('success') as $message)
+                        <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+            @else
+                {{ session('success') }}
+            @endif
+        </div>
+    @endif
     <table class="table">
         <thead>
             <tr>
