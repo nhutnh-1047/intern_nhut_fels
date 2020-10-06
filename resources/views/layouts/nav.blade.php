@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <h1>@lang('messages.title')</h1>
+            <h1>@lang('messages.logo')</h1>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +32,7 @@
                     <input type="image" src="{{ asset('/../../../asset/img/avatar.png') }}" width="50" height="50"
                         class="dropdown-toggle rounded-circle" data-toggle="dropdown" />
                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('admin.index') }}">@lang('messages.admin')</a>
                         <a class="dropdown-item" href="#">@lang('messages.my_profile')</a>
                         <a class="dropdown-item" href="{{ route('words.index') }}">@lang('messages.word_list')</a>
                         <a class="dropdown-item" href="{{ route('lesson.my.get') }}">@lang('messages.lesson')</a>

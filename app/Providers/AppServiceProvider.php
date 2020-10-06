@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Category;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,8 +16,8 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            'App\Repositories\LessonInterface',
-            'App\Repositories\LessonRepository'
+            'App\Repositories\EloquentInterface',
+            'App\Repositories\EloquentRepository'
         );
     }
 
@@ -26,6 +28,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::share('categories', $this->getCategory());
+    }
+
+    public function getCategory()
+    {
+        return Category::all()->load('category')->where('id_parent', '=', 0);
     }
 }

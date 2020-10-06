@@ -10,4 +10,12 @@ return [
         'notcomplete' => 0,
     ],
 
+    'start' => [
+        'join' => 0,
+    ],
+
+    'paginate' => [
+        'number' => 6,
+    ],
+
 ];

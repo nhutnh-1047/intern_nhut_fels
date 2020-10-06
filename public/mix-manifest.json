@@ -1,6 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/editLesson.js": "/js/editLesson.js",
+    "/js/editMember.js": "/js/editMember.js",
     "/js/joinLesson.js": "/js/joinLesson.js",
     "/js/updateWord.js": "/js/updateWord.js"
 }
